@@ -1,6 +1,11 @@
+import 'package:bus_tracker/core/di/injection_container.dart';
 import 'package:flutter/material.dart';
 
-void main() {
+void main() async{
+
+  //DI
+  await init();
+
   runApp(const MyApp());
 }
 

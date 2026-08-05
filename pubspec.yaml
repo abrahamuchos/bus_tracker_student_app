@@ -42,6 +42,8 @@ dependencies:
   retrofit: ^4.6.0
   json_annotation: ^4.9.0
   google_maps_flutter: ^2.14.0
+  dartz: ^0.10.1
+  connectivity_plus: ^7.3.1
 
 dev_dependencies:
   flutter_test:
