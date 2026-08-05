@@ -14,3 +14,8 @@ class WebSocketException implements Exception {
   final String message;
   WebSocketException([this.message = 'Error on WebSocket']);
 }
+
+class NetworkException implements Exception {
+  final String message;
+  NetworkException([this.message = 'Error on network']);
+}
