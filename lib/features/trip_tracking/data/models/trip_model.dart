@@ -10,11 +10,15 @@ class TripModel extends TripEntity {
   });
 
   factory TripModel.fromJson(Map<String, dynamic> json) {
+    final Map<String, dynamic> data =
+        json.containsKey('data') ? json['data'] as Map<String, dynamic> : json;
+
     return TripModel(
-      id: json['id'] as int,
-      busPlate: json['busPlate'] as String,
-      status: json['status'] == 'active' ? TripStatus.active : TripStatus.finished,
-      route: RouteModel.fromJson(json['route'] as Map<String, dynamic>),
+      id: data['id'] as int,
+      busPlate: data['busPlate'] as String,
+      status:
+          data['status'] == 'active' ? TripStatus.active : TripStatus.finished,
+      route: RouteModel.fromJson(data['route'] as Map<String, dynamic>),
     );
   }
 }

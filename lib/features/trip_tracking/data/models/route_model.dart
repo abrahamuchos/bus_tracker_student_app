@@ -15,16 +15,22 @@ class RouteModel extends RouteEntity {
   });
 
   factory RouteModel.fromJson(Map<String, dynamic> json) {
+    final Map<String, dynamic> data =
+    json.containsKey('data') ? json['data'] as Map<String, dynamic> : json;
+
+    final origin = data['origin'] as Map<String, dynamic>;
+    final destination = data['destination'] as Map<String, dynamic>;
+
     return RouteModel(
-      id: json['id'] as int,
-      name: json['name'] as String,
-      polylineEncoded: json['polylineEncoded'] as String,
-      originName: json['origin']['name'] as String?,
-      originLat: Parsers.toDouble(json['origin']['lat']),
-      originLng: Parsers.toDouble(json['origin']['lng']),
-      destinationName: json['destination']['name'] as String?,
-      destinationLat: Parsers.toDouble(json['destination']['lat']),
-      destinationLng: Parsers.toDouble(json['destination']['lng']),
+      id: data['id'] as int,
+      name: data['name'] as String,
+      polylineEncoded: data['polylineEncoded'] as String,
+      originName: origin['name'] as String?,
+      originLat: Parsers.toDouble(origin['lat']),
+      originLng: Parsers.toDouble(origin['lng']),
+      destinationName: destination['name'] as String?,
+      destinationLat: Parsers.toDouble(destination['lat']),
+      destinationLng: Parsers.toDouble(destination['lng']),
     );
   }
 }
