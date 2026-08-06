@@ -1,5 +1,5 @@
 import 'package:bus_tracker/core/utils/parsers.dart';
-import 'package:bus_tracker/features/trip_tracking/domain/entities/BusLocationEntity.dart';
+import 'package:bus_tracker/features/trip_tracking/domain/entities/bus_location.dart';
 
 class BusLocationModel extends BusLocationEntity {
   const BusLocationModel({
@@ -11,10 +11,10 @@ class BusLocationModel extends BusLocationEntity {
 
   factory BusLocationModel.fromJson(Map<String, dynamic> json){
     return BusLocationModel(
-        tripId: json['trip_id'] as int,
+        tripId: json['tripId'] as int,
         lat: Parsers.toDouble(json['lat']),
         lng: Parsers.toDouble(json['lng']),
-        recordedAt: DateTime.parse(json['recorded_at'] as String)
+        recordedAt: DateTime.parse(json['recordedAt'] as String)
     );
   }
 

@@ -1,6 +1,6 @@
 import 'package:bus_tracker/core/error/failures.dart';
 import 'package:bus_tracker/core/usecase/usecase.dart';
-import 'package:bus_tracker/features/trip_tracking/domain/entities/BusLocationEntity.dart';
+import 'package:bus_tracker/features/trip_tracking/domain/entities/bus_location.dart';
 import 'package:bus_tracker/features/trip_tracking/domain/repositories/trip_tracking_repository.dart';
 import 'package:bus_tracker/features/trip_tracking/domain/usecases/get_active_trip.dart';
 import 'package:bus_tracker/features/trip_tracking/domain/usecases/watch_bus_location.dart';

@@ -4,10 +4,12 @@ class RouteEntity extends Equatable {
   final int id;
   final String name;
   final String polylineEncoded;
+  final String? originName;
   final double originLat;
   final double originLng;
+  final String? destinationName;
   final double destinationLat;
-  final double destinationLnt;
+  final double destinationLng;
 
   const RouteEntity({
     required this.id,
@@ -16,7 +18,9 @@ class RouteEntity extends Equatable {
     required this.originLat,
     required this.originLng,
     required this.destinationLat,
-    required this.destinationLnt,
+    required this.destinationLng,
+    this.originName,
+    this.destinationName,
   });
 
   @override
@@ -27,6 +31,9 @@ class RouteEntity extends Equatable {
     originLat,
     originLng,
     destinationLat,
-    destinationLnt,
+    destinationLng,
+    originName,
+    destinationName,
   ];
 }
+

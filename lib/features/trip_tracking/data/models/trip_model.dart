@@ -12,7 +12,7 @@ class TripModel extends TripEntity {
   factory TripModel.fromJson(Map<String, dynamic> json) {
     return TripModel(
       id: json['id'] as int,
-      busPlate: json['bus_plate'] as String,
+      busPlate: json['busPlate'] as String,
       status: json['status'] == 'active' ? TripStatus.active : TripStatus.finished,
       route: RouteModel.fromJson(json['route'] as Map<String, dynamic>),
     );

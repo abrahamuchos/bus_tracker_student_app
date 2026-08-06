@@ -23,7 +23,7 @@ class TripTrackingRemoteDataSourceImpl implements TripTrackingRemoteDataSource{
           e.type == DioExceptionType.connectionTimeout) {
         throw NetworkException();
       }
-      throw ServerException(e.message ?? 'Error al obtener el trip activo');
+      throw ServerException(e.message ?? 'Error retrieving the active trip');
     }
   }
 

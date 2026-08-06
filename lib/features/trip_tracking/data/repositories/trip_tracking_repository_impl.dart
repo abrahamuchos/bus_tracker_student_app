@@ -5,7 +5,7 @@ import 'package:bus_tracker/core/error/failures.dart';
 import 'package:bus_tracker/core/network/network_info.dart';
 import 'package:bus_tracker/features/trip_tracking/data/datasources/trip_tracking_remote_data_source.dart';
 import 'package:bus_tracker/features/trip_tracking/data/datasources/trip_tracking_socket_data_source.dart';
-import 'package:bus_tracker/features/trip_tracking/domain/entities/BusLocationEntity.dart';
+import 'package:bus_tracker/features/trip_tracking/domain/entities/bus_location.dart';
 import 'package:bus_tracker/features/trip_tracking/domain/entities/trip.dart';
 import 'package:bus_tracker/features/trip_tracking/domain/repositories/trip_tracking_repository.dart';
 import 'package:dartz/dartz.dart';
