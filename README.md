@@ -1,6 +1,10 @@
 # Bus Tracker – Student App
 
-The goal of this project is to create a short app that allows students to see where the university bus is on its route. This covers only a small portion of the backend and does not include authentication.
+The goal of this project is to create a short app that allows students to see where the university bus is on its route.
+**This app is for students; it shows the route and the university bus's current location.** No login is required.
+
+**Backend**: [bus-tracker-uni](https://github.com/abrahamuchos/bus-tracker-uni)<br/>
+**Bus Tracker App**: [bus_tracker_app](https://github.com/abrahamuchos/bus_tracker_app)
 
 ## ✅ Features
 - Open Map
